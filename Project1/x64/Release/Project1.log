@@ -1,0 +1,107 @@
+﻿Build started 10/15/2015 11:09:51 AM.
+     1>Project "C:\Users\Connor\Documents\Visual Studio 2015\Projects\Project1\Project1\Project1.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\CL.exe /c /Zi /nologo /W3 /WX- /sdl /O2 /Oi /GL /D _MBCS /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"x64\Release\\" /Fd"x64\Release\vc140.pdb" /Gd /TP /errorReport:prompt fnctCvrt.cpp gameAI.cpp gameEnt.cpp gameItem.cpp menuGame.cpp main.cpp fnctMath.cpp menuDraw.cpp menuMain.cpp menuOpt.cpp menuPlay.cpp menuSel.cpp tempVars.cpp
+         fnctCvrt.cpp
+         gameAI.cpp
+         gameEnt.cpp
+         gameItem.cpp
+         menuGame.cpp
+     1>menuGame.cpp(14): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+     1>menuGame.cpp(46): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+     1>menuGame.cpp(48): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+     1>menuGame.cpp(50): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+     1>menuGame.cpp(57): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+     1>menuGame.cpp(59): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+     1>menuGame.cpp(61): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+     1>menuGame.cpp(68): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+     1>menuGame.cpp(70): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+     1>menuGame.cpp(72): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+     1>menuGame.cpp(79): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+     1>menuGame.cpp(81): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+     1>menuGame.cpp(83): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+     1>menuGame.cpp(90): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+     1>menuGame.cpp(92): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+     1>menuGame.cpp(94): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+     1>menuGame.cpp(111): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+     1>menuGame.cpp(113): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+     1>menuGame.cpp(115): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+     1>menuGame.cpp(122): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+     1>menuGame.cpp(124): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+     1>menuGame.cpp(126): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+     1>menuGame.cpp(133): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+     1>menuGame.cpp(135): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+     1>menuGame.cpp(137): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+     1>menuGame.cpp(144): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+     1>menuGame.cpp(146): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+     1>menuGame.cpp(148): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+     1>menuGame.cpp(155): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+     1>menuGame.cpp(157): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+     1>menuGame.cpp(159): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+     1>menuGame.cpp(192): warning C4305: 'argument': truncation from 'double' to 'float'
+     1>menuGame.cpp(193): warning C4305: 'argument': truncation from 'double' to 'float'
+     1>menuGame.cpp(222): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+     1>menuGame.cpp(470): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+     1>menuGame.cpp(536): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+     1>menuGame.cpp(541): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+     1>menuGame.cpp(546): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+         main.cpp
+     1>main.cpp(37): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+         fnctMath.cpp
+         menuDraw.cpp
+     1>menuDraw.cpp(287): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+     1>menuDraw.cpp(288): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+     1>menuDraw.cpp(289): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+         menuMain.cpp
+     1>menuMain.cpp(27): warning C4305: 'argument': truncation from 'double' to 'float'
+     1>menuMain.cpp(28): warning C4305: 'argument': truncation from 'double' to 'float'
+         menuOpt.cpp
+     1>menuOpt.cpp(25): warning C4305: 'argument': truncation from 'double' to 'float'
+     1>menuOpt.cpp(40): warning C4305: 'argument': truncation from 'double' to 'float'
+     1>menuOpt.cpp(42): warning C4305: 'argument': truncation from 'double' to 'float'
+     1>menuOpt.cpp(83): warning C4305: 'argument': truncation from 'double' to 'float'
+     1>menuOpt.cpp(127): warning C4305: 'argument': truncation from 'double' to 'float'
+     1>menuOpt.cpp(186): warning C4305: 'argument': truncation from 'double' to 'float'
+     1>menuOpt.cpp(310): warning C4305: 'argument': truncation from 'double' to 'float'
+     1>menuOpt.cpp(444): warning C4305: 'argument': truncation from 'double' to 'float'
+     1>menuOpt.cpp(448): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+     1>menuOpt.cpp(451): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+     1>menuOpt.cpp(502): warning C4305: 'argument': truncation from 'double' to 'float'
+     1>menuOpt.cpp(546): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+     1>menuOpt.cpp(549): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+     1>menuOpt.cpp(562): warning C4305: 'argument': truncation from 'double' to 'float'
+     1>menuOpt.cpp(568): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+     1>menuOpt.cpp(571): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+     1>menuOpt.cpp(615): warning C4305: 'argument': truncation from 'double' to 'float'
+         menuPlay.cpp
+     1>menuPlay.cpp(31): warning C4305: 'argument': truncation from 'double' to 'float'
+         menuSel.cpp
+     1>menuSel.cpp(72): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+         tempVars.cpp
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Connor\Documents\Visual Studio 2015\Projects\Project1\x64\Release\RTS.exe" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /Debug /PDB:"C:\Users\Connor\Documents\Visual Studio 2015\Projects\Project1\x64\Release\RTS.pdb" /OPT:REF /OPT:ICF /LTCG:incremental /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Connor\Documents\Visual Studio 2015\Projects\Project1\x64\Release\RTS.lib" /MACHINE:X64 x64\Release\fnctCvrt.obj
+         x64\Release\gameAI.obj
+         x64\Release\gameEnt.obj
+         x64\Release\gameItem.obj
+         x64\Release\menuGame.obj
+         x64\Release\main.obj
+         x64\Release\fnctMath.obj
+         x64\Release\menuDraw.obj
+         x64\Release\menuMain.obj
+         x64\Release\menuOpt.obj
+         x64\Release\menuPlay.obj
+         x64\Release\menuSel.obj
+         x64\Release\tempVars.obj
+     1>menuGame.obj : error LNK2001: unresolved external symbol "void __cdecl sfw::drawLine(float,float,float,float)" (?drawLine@sfw@@YAXMMMM@Z)
+     1>menuGame.obj : error LNK2001: unresolved external symbol "void __cdecl sfw::drawCircle(float,float,float)" (?drawCircle@sfw@@YAXMMM@Z)
+     1>main.obj : error LNK2001: unresolved external symbol "void __cdecl sfw::termContext(void)" (?termContext@sfw@@YAXXZ)
+     1>main.obj : error LNK2001: unresolved external symbol "void __cdecl sfw::initContext(int,int,char const *)" (?initContext@sfw@@YAXHHPEBD@Z)
+     1>main.obj : error LNK2001: unresolved external symbol "bool __cdecl sfw::stepContext(void)" (?stepContext@sfw@@YA_NXZ)
+     1>menuDraw.obj : error LNK2001: unresolved external symbol "float __cdecl sfw::getDeltaTime(void)" (?getDeltaTime@sfw@@YAMXZ)
+     1>menuSel.obj : error LNK2001: unresolved external symbol "bool __cdecl sfw::getKey(char)" (?getKey@sfw@@YA_ND@Z)
+     1>C:\Users\Connor\Documents\Visual Studio 2015\Projects\Project1\x64\Release\RTS.exe : fatal error LNK1120: 7 unresolved externals
+     1>Done Building Project "C:\Users\Connor\Documents\Visual Studio 2015\Projects\Project1\Project1\Project1.vcxproj" (Build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:04.63

@@ -1,0 +1,29 @@
+﻿Build started 10/15/2015 11:11:42 AM.
+     1>Project "C:\Users\Connor\Documents\Visual Studio 2015\Projects\Project1\Project1\Project1.vcxproj" on node 2 (Build target(s)).
+     1>Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Connor\Documents\Visual Studio 2015\Projects\Project1\Release\RTS.exe" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /Debug /PDB:"C:\Users\Connor\Documents\Visual Studio 2015\Projects\Project1\Release\RTS.pdb" /OPT:REF /OPT:ICF /LTCG:incremental /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Connor\Documents\Visual Studio 2015\Projects\Project1\Release\RTS.lib" /MACHINE:X86 /SAFESEH Release\fnctCvrt.obj
+         Release\gameAI.obj
+         Release\gameEnt.obj
+         Release\gameItem.obj
+         Release\menuGame.obj
+         Release\main.obj
+         Release\fnctMath.obj
+         Release\menuDraw.obj
+         Release\menuMain.obj
+         Release\menuOpt.obj
+         Release\menuPlay.obj
+         Release\menuSel.obj
+         Release\tempVars.obj
+     1>menuGame.obj : error LNK2001: unresolved external symbol "void __cdecl sfw::drawLine(float,float,float,float)" (?drawLine@sfw@@YAXMMMM@Z)
+     1>menuGame.obj : error LNK2001: unresolved external symbol "void __cdecl sfw::drawCircle(float,float,float)" (?drawCircle@sfw@@YAXMMM@Z)
+     1>main.obj : error LNK2001: unresolved external symbol "void __cdecl sfw::termContext(void)" (?termContext@sfw@@YAXXZ)
+     1>main.obj : error LNK2001: unresolved external symbol "void __cdecl sfw::initContext(int,int,char const *)" (?initContext@sfw@@YAXHHPBD@Z)
+     1>main.obj : error LNK2001: unresolved external symbol "bool __cdecl sfw::stepContext(void)" (?stepContext@sfw@@YA_NXZ)
+     1>menuDraw.obj : error LNK2001: unresolved external symbol "float __cdecl sfw::getDeltaTime(void)" (?getDeltaTime@sfw@@YAMXZ)
+     1>menuSel.obj : error LNK2001: unresolved external symbol "bool __cdecl sfw::getKey(char)" (?getKey@sfw@@YA_ND@Z)
+     1>C:\Users\Connor\Documents\Visual Studio 2015\Projects\Project1\Release\RTS.exe : fatal error LNK1120: 7 unresolved externals
+     1>Done Building Project "C:\Users\Connor\Documents\Visual Studio 2015\Projects\Project1\Project1\Project1.vcxproj" (Build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:00.26

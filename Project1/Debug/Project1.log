@@ -1,0 +1,22 @@
+﻿Build started 10/15/2015 11:11:52 AM.
+     1>Project "C:\Users\Connor\Documents\Visual Studio 2015\Projects\Project1\Project1\Project1.vcxproj" on node 2 (Build target(s)).
+     1>Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Connor\Documents\Visual Studio 2015\Projects\Project1\Debug\RTS.exe" /INCREMENTAL /NOLOGO SFW.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /Debug /PDB:"C:\Users\Connor\Documents\Visual Studio 2015\Projects\Project1\Debug\RTS.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Connor\Documents\Visual Studio 2015\Projects\Project1\Debug\RTS.lib" /MACHINE:X86 Debug\fnctCvrt.obj
+         Debug\gameAI.obj
+         Debug\gameEnt.obj
+         Debug\gameItem.obj
+         Debug\menuGame.obj
+         Debug\main.obj
+         Debug\fnctMath.obj
+         Debug\menuDraw.obj
+         Debug\menuMain.obj
+         Debug\menuOpt.obj
+         Debug\menuPlay.obj
+         Debug\menuSel.obj
+         Debug\tempVars.obj
+         Project1.vcxproj -> C:\Users\Connor\Documents\Visual Studio 2015\Projects\Project1\Debug\RTS.exe
+     1>Done Building Project "C:\Users\Connor\Documents\Visual Studio 2015\Projects\Project1\Project1\Project1.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:00.19
