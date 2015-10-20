@@ -1,0 +1,15 @@
+Post-Mortem
+
+Fails
+- Originally, I had assumed not using an array for the rooms would be easier, and that just using a single int tot hopld th edata would be easier to use than an array for the way Wumpus was made. As I started developing the moving system for the AI and the player, I quickly learned that this wasn't the case.
+- I am disapointed I never managed to get the inventory system working. Int his build, you have a torch in the middle of the room, which is a relic of the early days of making invberntyory and placeble items. Unfortunately, I had to rip out what little of the system existed jsut to get it to this state by today. 
+- Addtionally, there was supposed to be a "class select" system. Relics of this in gameplay include how you can't shoot yourself like in the original wumpus. Relics in the code include two other unfinished (but workable) sprites for other classes.
+
+Draws
+-The menus probably would've been way easier to make if the main function used enums instead of an array of booleans. 
+- While the way the 9-Room game is written works, and works surprisngly well, even if it's a bit shoddy, I wish I made my self make it dynamic for easier implentation of the other game types. 
+
+Wins
+- I was surprised how hard just a randomly moving AI made the game. I was disapointed I didnt have the time to implemetn smarter AI, but turn out trandomly moving was pretty effective.
+- I am actually really happy with the way the menus came together. I'll hvae to cut down and refine the system over the rest of the time I use SFW, but I am realy happy with how all the graphics came out.
+- I am glad I made the decision for the Wumpus to move after every action you take. While some more refining with the look is needed, It makes the game much more balanced for such a small arena
