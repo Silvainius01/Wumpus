@@ -211,16 +211,11 @@ void drawEntSprite(Entity e)
 		drawLine(x + frac(w, 1, 4), y + frac(h, 3, 4), x + frac(w, 6, 20), y + frac(h, 19, 20));//Fletching
 		break;
 	case 3: //Wumpus
-		h = ySpace(7, 100);
-		w = xSpace(50, 100);
-		x = xSpace(50, 100);
-		y = ySpace(50, 100);
-		//drawLine(x + w, y + h, x + (w / 2), y + h);
-		//drawLine(x + w, y + h, x + w, y + frac(h, 1, 10));
-		for (int a = 0; a < 180; a++)
-		{
-			drawLine(x, y, x + (a * (PI/180)) * 5, y + (a * (PI/180)) * 5);
-		}
+		h = ySpace(6, 100);
+		w = xSpace(2, 100);
+		x -= w / 2;
+		y -= h / 2;
+		drawChar('W', x, y, h, w);
 		break;
 	case 4: //Chest
 		break;
@@ -258,7 +253,22 @@ void drawEntSpriteReDir(int a)
 bool drawGameMoveMenu(int dir)
 {
 	drawStringHor("PRESS A MOVE KEY", xSpace(26.5, 100), ySpace(91, 100), ySpace(6, 100), xSpace(2, 100), xSpace(1, 100));
-	if (dir != -1) { e_Player.entMove(dir); return true; }
+	if (dir != -1) 
+	{ 
+		int wumpus = e_Wumpus.getEntPos();
+		e_Player.entMove(dir); 
+		drawStringHor("PRAY TO RNGESUS", xSpace(14, 100), ySpace(1, 100), ySpace(6, 100), xSpace(2, 100), xSpace(1, 100));
+		e_Wumpus.entMove(getAIdir(0)); 
+		if (e_Wumpus.getEntPos() == e_Player.getEntPos())
+		{
+			while (e_Wumpus.getEntPos() == e_Player.getEntPos())
+			{
+				e_Wumpus.setEntPos(wumpus);
+				e_Wumpus.entMove(getAIdir(0));
+			}
+		}
+		return true; 
+	}
 	else { return false; }
 }
 
@@ -292,7 +302,12 @@ bool drawLookConfMenu(bool pSel)
 	}
 
 	drawSeenEnts();
-	if (pSel) { return true; }
+	if (pSel) 
+	{ 
+		drawStringHor("PRAY TO RNGESUS", xSpace(14, 100), ySpace(1, 100), ySpace(6, 100), xSpace(2, 100), xSpace(1, 100));
+		e_Wumpus.entMove(getAIdir(0)); 
+		return true; 
+	}
 	else { return false; }
 }
 bool drawGameLookMenu(bool pSel)
@@ -366,6 +381,8 @@ bool drawGameShootConf(bool pSel, int room1, int room2)
 		frst[6] = false;
 		frst[4] = true;
 		frst[3] = true;
+		drawStringHor("PRAY TO RNGESUS", xSpace(14, 100), ySpace(1, 100), ySpace(6, 100), xSpace(2, 100), xSpace(1, 100));
+		e_Wumpus.entMove(getAIdir(0));
 		return true; 
 	}
 	else { return false; }
@@ -430,6 +447,33 @@ bool drawGameShootMenu(bool pSel)
 	else { return false; }
 }
 
+void drawSelBoxSave(int choice)
+{
+	switch (choice)
+	{
+	case 0:
+		drawBox(xSpace(58.5, 100), ySpace(90, 100), ySpace(8, 100), xSpace(10, 100));
+		break;
+	case 1:
+		drawBox(xSpace(73.5, 100), ySpace(90, 100), ySpace(8, 100), xSpace(8, 100));
+		break;
+	}
+}
+bool drawGameSaveMenu(bool pSel)
+{
+	int choice = menuChoice(2, false);
+
+	drawStringHor("SAVE GAME?   YES  NO", xSpace(20.5, 100), ySpace(91, 100), ySpace(6, 100), xSpace(2, 100), xSpace(1, 100));
+	drawSelBoxSave(choice);
+
+	if (pSel) 
+	{ 
+		if (choice == 0) { saveGame(); }
+		return true; 
+	}
+	else { return false; }
+}
+
 bool drawCreateMenu()
 {
 	input = getLetInput();
@@ -472,9 +516,18 @@ bool drawCreateMenu()
 
 	if (cN[14] != '#')
 	{
+		srand(time(NULL));
+		int rand = std::rand() % 9;
 		e_Player.setEntName(cN);
-		e_Player.setEntPos(4);
+		e_Player.setEntPos(rand);
 		e_Player.setEntSprite(2);
+		srand(time(NULL));
+		int rand2 = std::rand() % 9;
+		while (rand2 == rand)
+		{
+			rand2 = std::rand() % 9;
+		}
+		e_Wumpus.setEntPos(rand2);
 		return true;
 	}
 
@@ -511,7 +564,24 @@ int drawTurnMenu(bool pSel)
 	if (pSel) { return choice; }
 	else { return -1; }
 }
-void roomChecker()
+int drawGameAteMenu(bool pSel)
+{
+	drawStringHor("THE WUMPUS ATE YOU!    OKAY", xSpace(9.5, 100), ySpace(91, 100), ySpace(6, 100), xSpace(2, 100), xSpace(1, 100));
+	drawBox(xSpace(77.5, 100), ySpace(90, 100), ySpace(8, 100), xSpace(13, 100));
+
+	if (pSel)
+	{
+		sel = 0;
+		for (int a = 0; a < 8; a++) { frst[a] = true; }
+		frst[6] = false;
+		initEnts();
+		bTemp = false;
+		return 4;
+	}
+	else { return -1; }
+
+}
+bool roomChecker()
 { //The purpose of this function is to draw the entities the player can see in their room.
 	Entity e;
 
@@ -521,12 +591,18 @@ void roomChecker()
 		if (e.getEntPos() == e_Player.getEntPos()) { see[a] = true; }
 		else { see[a] = false; }
 	}
+
+	if (e_Wumpus.getEntPos() == e_Player.getEntPos()) { return true; }
+	else { return false; }
 }
 int drawGame()
 {
 	int choice;
 
-	roomChecker();
+	if (roomChecker())
+	{
+		return drawGameAteMenu(checkSel());
+	}
    /**********************************************\
 	*  These three for loops draw the room boxes *
    \**********************************************/

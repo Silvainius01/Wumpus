@@ -31,16 +31,21 @@ const int MENU = 22;
 * [21] = shoot conf
 */
 bool menu[MENU];
+bool launchedFromLoad = false;
 
 void main()
 {
 	initContext(SCREEN_X, SCREEN_Y, "RTS");
-	initEnts();
-	for (int a = 0; a != MENU; a++) { menu[a] = false; }
-	menu[0] = true;
-	bTemp = false;
-	//Comment this in/out to turn on/off the test screen.
-	//menu[6] = true;
+	if (!launchedFromLoad)
+	{
+		initEnts();
+		for (int a = 0; a != MENU; a++) { menu[a] = false; }
+		menu[0] = true;
+		bTemp = false;
+		//Comment this in/out to turn on/off the test screen.
+		//menu[6] = true;
+	}
+	else { launchedFromLoad = false; }
 
 	while (stepContext())
 	{
@@ -162,6 +167,18 @@ void main()
 								}
 								break;
 							case 3:
+								switch (drawGameSaveMenu(checkSel()))
+								{
+								case true:
+									bTemp = false;
+									break;
+								case false:
+									break;
+								}
+								break;
+							case 4:
+								for (int a = 0; a != MENU; a++) { menu[a] = false; }
+								menu[0] = true;
 								break;
 							}
 						}
@@ -183,6 +200,9 @@ void main()
 						case 3:
 							break;
 						case 4:
+							loadGame();
+							break;
+						case 5:
 							menu[1] = false;
 							menu[0] = true;
 							sel = 0;
@@ -384,31 +404,136 @@ void main()
 		}
 		else
 		{
-			//x = cx + r * cos(a)
-			//y = cy + r * sin(a)
-			//drawEntSpriteReDir(1);
-			/*float sx = xSpace(1, 2);
-			float sy = ySpace(0, 2);
-			float x = 0;
-			for (float a = 0; a < 100; a += 1)
-			{
-				float blerg;
-				if (a != 0) { x += 0.1f; sx++; }
-				graph(x + 10 * (PI / 180), sx, sy);
-			}*/
-
-			float coef[4] = { 0,0,0.05f,0 };
-			//x^3 + x^2 + 0x + 0
-			graphPoly(3, coef, 100, 0, 40);
 		}
 
+		cout << endl; for (int a = 0; a < MENU; a++) { cout << menu[a]; } cout << endl;
+		for (int a = 0; a < 8; a++) { cout << frst[a]; } cout << endl;
+		cout << SCREEN_X << "; " << SCREEN_Y << endl;
+		cout << key << endl;
+		for (int a = 0; a < 15; a++) { cout << e_Player.getEntName(a); }
+		cout << endl << e_Player.getEntPos() << endl;
+		cout << e_Wumpus.getEntPos() << endl;
+		cout << e_Torch.getEntPos() << endl;
 		drawFrameRate(xSpace(1, 100), ySpace(1, 100), ySpace(6, 100), xSpace(2, 100), xSpace(1, 100));
 		cout << endl << endl;
 	}
 }
 
-void saveGame();
-void loadGame();
+int saveGame()
+{
+	fstream save;
+	save.open("save.txt", ios_base::out);
+	if (save.is_open())
+	{
+		save << e_Player.getEntID() << " ";
+		for (int a = 0; a < 15; a++) { save << e_Player.getEntName(a); }
+		save << " " << e_Player.getEntPos() << " " << e_Player.getEntSprite() << endl;
+
+		save << e_Wumpus.getEntID() << " " << e_Wumpus.getEntPos() << endl;
+
+		save << e_Torch.getEntID() << " " << e_Torch.getEntPos() << endl;
+
+		for (int a = 0; a < 8; a++) { save << frst[a]; } save << endl;
+
+		for (int a = 0; a < MENU; a++) { save << menu[a]; } save << endl;
+
+		if (cTemp == '\0') { cTemp = 'n'; }
+		save << fTemp << " " << bTemp << " " << cTemp << " " << iTemp << " " << sel << endl;
+
+		save << SCREEN_X << " " << SCREEN_Y << endl;
+
+		for (int a = 0; a < 5; a++) { save << key[a + 10]; } save << endl;
+		save.close();
+	}
+	else { cout << "Failed to create save file"; return -1; }
+}
+void loadGame()
+{
+	fstream load;
+
+	load.open("save.txt", ios_base::in);
+	if(load.is_open()) 
+	{
+
+	   /**************************************\
+		*	PLAYER DATA:                     *
+		*		temp[0] = ID,                *
+		*		temp[2] - temp[16] = name,   *
+		*		temp[18] = pos,              *
+		*		temp[20] = sprite            *
+		*	WUMPUS DATA:                     *
+		*		temp[0] = ID                 *
+		*		temp[2] = pos                *
+		*	TORCH DATA:                      *
+		*		temp[0] = ID                 *
+		*		temp[2] = pos                *
+		*	IN-GAME STATE DATA:              *
+		*		temp[0] - temp[7];           *
+		*	MENU STATE DATA:                 *
+		*		temp[0] - temp[21];          *
+		*	SCREEN SETTINGS:                 *
+		*		temp[0] - temp[2] = X        *
+		*		temp[4] - temp[6] = Y        *
+		*	CONTROLS:                        *
+		*		temp[0] = up                 *
+		*		temp[1] = down               *
+		*		temp[3] = left               *
+		*		temp[4] = right              *
+		*		temp[5] = select             *
+	   \**************************************/
+
+		char data[23];
+
+		//Player 
+		load.getline(data, 23);
+		char a[15];
+		for (int b = 0; data[b + 2] != ' '; b++)
+		{
+			a[b] = data[b + 2];
+			if (b == 14) { e_Player.setEntName(a); }
+		}
+		e_Player.setEntPos(getIntFromChar(data[18]));
+		e_Player.setEntSprite(getIntFromChar(data[20]));
+
+		//Wumpus
+		load.getline(data, 23);
+		e_Wumpus.setEntPos(getIntFromChar(data[2]));
+
+		//Torch
+		load.getline(data, 23);
+		e_Torch.setEntPos(getIntFromChar(data[2]));
+
+		//In Game States
+		load.getline(data, 23);
+		for (int a = 0; a < 8; a++) { frst[a] = getIntFromChar(data[a]); }
+
+		//Menu States
+		load.getline(data, 23);
+		for (int a = 0; a < 23; a++) { menu[a] = getIntFromChar(data[a]); }
+
+		//temp vars
+		load.getline(data, 23);
+		cout << data << endl;
+		fTemp = getIntFromChar(data[1]);
+		bTemp = getIntFromChar(data[3]);
+		cTemp = data[5];
+		iTemp = getIntFromChar(data[7]);
+		sel = getIntFromChar(data[9]);
+
+		//Screen Settings
+		load.getline(data, 23);
+		char x[4], y[4];
+		
+
+		//Controls
+		load.getline(data, 23);
+		for (int a = 0; a < 5; a++) { key[a + 10] = data[a]; }
+
+		termContext();
+		launchedFromLoad = true;
+		runMain();
+	}
+}
 
 void runMain()
 {

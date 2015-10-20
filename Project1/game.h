@@ -19,10 +19,10 @@ public:
 	int getEntPos();
 	int getEntSprite();
 	int getEntID();
+	char getEntName(int place);
 	void setEntName(char n[15]);
 	void setEntPos(int r);
 	void setEntSprite(int s);
-	void getEntName();
 	void entMove(int dir);
 	void setEntID(int id);
 };
@@ -37,13 +37,17 @@ extern Entity getRefEnt(int id);
 extern void initEnts();
 
 //In gameAI.cpp
-extern int getAIdir();
+extern int getAIdir(int dif);
 
 //In gamePlay.cpp
 struct Item { int ID; };
 extern Item i_Torch;
 extern Item i_Mirror;
 extern Item i_Weapon;
+
+//In main.cpp
+extern int saveGame();
+extern void loadGame();
 
 
 /*

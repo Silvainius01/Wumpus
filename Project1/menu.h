@@ -47,10 +47,12 @@ extern bool drawContSMenu(bool pSel);
 
 //In menuGame.cpp
 extern int drawGame();
+extern bool frst[8];
 extern bool drawCreateMenu();
 extern bool drawGameMoveMenu(int dir);
 extern bool drawGameLookMenu(bool pSel);
 extern bool drawLookConfMenu(bool pSel);
 extern bool drawGameShootMenu(bool pSel);
 extern bool drawGameShootConf(bool pSel, int room1, int room2);
+extern bool drawGameSaveMenu(bool pSel);
 extern void drawEntSpriteReDir(int e);

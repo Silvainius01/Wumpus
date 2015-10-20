@@ -1,0 +1,106 @@
+﻿Build started 10/15/2015 11:30:51 AM.
+     1>Project "C:\Users\Connor\Documents\Visual Studio 2015\Projects\Project1\Project1\Project1.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"x64\Debug\\" /Fd"x64\Debug\vc140.pdb" /Gd /TP /errorReport:prompt fnctCvrt.cpp gameAI.cpp gameEnt.cpp gameItem.cpp menuGame.cpp main.cpp fnctMath.cpp menuDraw.cpp menuMain.cpp menuOpt.cpp menuPlay.cpp menuSel.cpp tempVars.cpp
+         tempVars.cpp
+         menuSel.cpp
+     1>c:\users\connor\documents\visual studio 2015\projects\project1\project1\menusel.cpp(72): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+         menuPlay.cpp
+     1>c:\users\connor\documents\visual studio 2015\projects\project1\project1\menuplay.cpp(31): warning C4305: 'argument': truncation from 'double' to 'float'
+         menuOpt.cpp
+     1>c:\users\connor\documents\visual studio 2015\projects\project1\project1\menuopt.cpp(25): warning C4305: 'argument': truncation from 'double' to 'float'
+     1>c:\users\connor\documents\visual studio 2015\projects\project1\project1\menuopt.cpp(40): warning C4305: 'argument': truncation from 'double' to 'float'
+     1>c:\users\connor\documents\visual studio 2015\projects\project1\project1\menuopt.cpp(42): warning C4305: 'argument': truncation from 'double' to 'float'
+     1>c:\users\connor\documents\visual studio 2015\projects\project1\project1\menuopt.cpp(83): warning C4305: 'argument': truncation from 'double' to 'float'
+     1>c:\users\connor\documents\visual studio 2015\projects\project1\project1\menuopt.cpp(127): warning C4305: 'argument': truncation from 'double' to 'float'
+     1>c:\users\connor\documents\visual studio 2015\projects\project1\project1\menuopt.cpp(186): warning C4305: 'argument': truncation from 'double' to 'float'
+     1>c:\users\connor\documents\visual studio 2015\projects\project1\project1\menuopt.cpp(310): warning C4305: 'argument': truncation from 'double' to 'float'
+     1>c:\users\connor\documents\visual studio 2015\projects\project1\project1\menuopt.cpp(444): warning C4305: 'argument': truncation from 'double' to 'float'
+     1>c:\users\connor\documents\visual studio 2015\projects\project1\project1\menuopt.cpp(448): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+     1>c:\users\connor\documents\visual studio 2015\projects\project1\project1\menuopt.cpp(451): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+     1>c:\users\connor\documents\visual studio 2015\projects\project1\project1\menuopt.cpp(502): warning C4305: 'argument': truncation from 'double' to 'float'
+     1>c:\users\connor\documents\visual studio 2015\projects\project1\project1\menuopt.cpp(546): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+     1>c:\users\connor\documents\visual studio 2015\projects\project1\project1\menuopt.cpp(549): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+     1>c:\users\connor\documents\visual studio 2015\projects\project1\project1\menuopt.cpp(562): warning C4305: 'argument': truncation from 'double' to 'float'
+     1>c:\users\connor\documents\visual studio 2015\projects\project1\project1\menuopt.cpp(568): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+     1>c:\users\connor\documents\visual studio 2015\projects\project1\project1\menuopt.cpp(571): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+     1>c:\users\connor\documents\visual studio 2015\projects\project1\project1\menuopt.cpp(615): warning C4305: 'argument': truncation from 'double' to 'float'
+         menuMain.cpp
+     1>c:\users\connor\documents\visual studio 2015\projects\project1\project1\menumain.cpp(27): warning C4305: 'argument': truncation from 'double' to 'float'
+     1>c:\users\connor\documents\visual studio 2015\projects\project1\project1\menumain.cpp(28): warning C4305: 'argument': truncation from 'double' to 'float'
+         menuDraw.cpp
+     1>c:\users\connor\documents\visual studio 2015\projects\project1\project1\menudraw.cpp(287): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+     1>c:\users\connor\documents\visual studio 2015\projects\project1\project1\menudraw.cpp(288): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+     1>c:\users\connor\documents\visual studio 2015\projects\project1\project1\menudraw.cpp(289): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+         fnctMath.cpp
+         main.cpp
+     1>c:\users\connor\documents\visual studio 2015\projects\project1\project1\main.cpp(37): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+         menuGame.cpp
+     1>c:\users\connor\documents\visual studio 2015\projects\project1\project1\menugame.cpp(14): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+     1>c:\users\connor\documents\visual studio 2015\projects\project1\project1\menugame.cpp(46): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+     1>c:\users\connor\documents\visual studio 2015\projects\project1\project1\menugame.cpp(48): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+     1>c:\users\connor\documents\visual studio 2015\projects\project1\project1\menugame.cpp(50): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+     1>c:\users\connor\documents\visual studio 2015\projects\project1\project1\menugame.cpp(57): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+     1>c:\users\connor\documents\visual studio 2015\projects\project1\project1\menugame.cpp(59): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+     1>c:\users\connor\documents\visual studio 2015\projects\project1\project1\menugame.cpp(61): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+     1>c:\users\connor\documents\visual studio 2015\projects\project1\project1\menugame.cpp(68): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+     1>c:\users\connor\documents\visual studio 2015\projects\project1\project1\menugame.cpp(70): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+     1>c:\users\connor\documents\visual studio 2015\projects\project1\project1\menugame.cpp(72): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+     1>c:\users\connor\documents\visual studio 2015\projects\project1\project1\menugame.cpp(79): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+     1>c:\users\connor\documents\visual studio 2015\projects\project1\project1\menugame.cpp(81): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+     1>c:\users\connor\documents\visual studio 2015\projects\project1\project1\menugame.cpp(83): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+     1>c:\users\connor\documents\visual studio 2015\projects\project1\project1\menugame.cpp(90): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+     1>c:\users\connor\documents\visual studio 2015\projects\project1\project1\menugame.cpp(92): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+     1>c:\users\connor\documents\visual studio 2015\projects\project1\project1\menugame.cpp(94): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+     1>c:\users\connor\documents\visual studio 2015\projects\project1\project1\menugame.cpp(111): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+     1>c:\users\connor\documents\visual studio 2015\projects\project1\project1\menugame.cpp(113): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+     1>c:\users\connor\documents\visual studio 2015\projects\project1\project1\menugame.cpp(115): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+     1>c:\users\connor\documents\visual studio 2015\projects\project1\project1\menugame.cpp(122): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+     1>c:\users\connor\documents\visual studio 2015\projects\project1\project1\menugame.cpp(124): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+     1>c:\users\connor\documents\visual studio 2015\projects\project1\project1\menugame.cpp(126): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+     1>c:\users\connor\documents\visual studio 2015\projects\project1\project1\menugame.cpp(133): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+     1>c:\users\connor\documents\visual studio 2015\projects\project1\project1\menugame.cpp(135): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+     1>c:\users\connor\documents\visual studio 2015\projects\project1\project1\menugame.cpp(137): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+     1>c:\users\connor\documents\visual studio 2015\projects\project1\project1\menugame.cpp(144): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+     1>c:\users\connor\documents\visual studio 2015\projects\project1\project1\menugame.cpp(146): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+     1>c:\users\connor\documents\visual studio 2015\projects\project1\project1\menugame.cpp(148): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+     1>c:\users\connor\documents\visual studio 2015\projects\project1\project1\menugame.cpp(155): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+     1>c:\users\connor\documents\visual studio 2015\projects\project1\project1\menugame.cpp(157): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+     1>c:\users\connor\documents\visual studio 2015\projects\project1\project1\menugame.cpp(159): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+     1>c:\users\connor\documents\visual studio 2015\projects\project1\project1\menugame.cpp(192): warning C4305: 'argument': truncation from 'double' to 'float'
+     1>c:\users\connor\documents\visual studio 2015\projects\project1\project1\menugame.cpp(193): warning C4305: 'argument': truncation from 'double' to 'float'
+     1>c:\users\connor\documents\visual studio 2015\projects\project1\project1\menugame.cpp(222): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+     1>c:\users\connor\documents\visual studio 2015\projects\project1\project1\menugame.cpp(470): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+     1>c:\users\connor\documents\visual studio 2015\projects\project1\project1\menugame.cpp(536): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+     1>c:\users\connor\documents\visual studio 2015\projects\project1\project1\menugame.cpp(541): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+     1>c:\users\connor\documents\visual studio 2015\projects\project1\project1\menugame.cpp(546): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+         gameItem.cpp
+         gameEnt.cpp
+         gameAI.cpp
+         fnctCvrt.cpp
+         Generating Code...
+     1>c:\users\connor\documents\visual studio 2015\projects\project1\project1\menugame.cpp(100): warning C4715: 'getX': not all control paths return a value
+     1>c:\users\connor\documents\visual studio 2015\projects\project1\project1\menugame.cpp(431): warning C4715: 'drawGameShootMenu': not all control paths return a value
+     1>c:\users\connor\documents\visual studio 2015\projects\project1\project1\menugame.cpp(163): warning C4715: 'getY': not all control paths return a value
+     1>c:\users\connor\documents\visual studio 2015\projects\project1\project1\menuopt.cpp(290): warning C4715: 'drawScrnHMenu': not all control paths return a value
+     1>c:\users\connor\documents\visual studio 2015\projects\project1\project1\menuopt.cpp(414): warning C4715: 'drawScrnWMenu': not all control paths return a value
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Connor\Documents\Visual Studio 2015\Projects\Project1\x64\Debug\RTS.exe" /INCREMENTAL /NOLOGO SFW.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /Debug /PDB:"C:\Users\Connor\Documents\Visual Studio 2015\Projects\Project1\x64\Debug\RTS.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Connor\Documents\Visual Studio 2015\Projects\Project1\x64\Debug\RTS.lib" /MACHINE:X64 x64\Debug\fnctCvrt.obj
+         x64\Debug\gameAI.obj
+         x64\Debug\gameEnt.obj
+         x64\Debug\gameItem.obj
+         x64\Debug\menuGame.obj
+         x64\Debug\main.obj
+         x64\Debug\fnctMath.obj
+         x64\Debug\menuDraw.obj
+         x64\Debug\menuMain.obj
+         x64\Debug\menuOpt.obj
+         x64\Debug\menuPlay.obj
+         x64\Debug\menuSel.obj
+         x64\Debug\tempVars.obj
+     1>SFW.lib(sfwdraw.obj) : fatal error LNK1112: module machine type 'X86' conflicts with target machine type 'x64'
+     1>Done Building Project "C:\Users\Connor\Documents\Visual Studio 2015\Projects\Project1\Project1\Project1.vcxproj" (Build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:05.45

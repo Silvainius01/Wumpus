@@ -6,14 +6,16 @@
 int Entity::getEntPos() { return room; }
 int Entity::getEntSprite() { return sprite; }
 int Entity::getEntID() { return ID; }
+char Entity::getEntName(int place)
+{ //Must be used in a for loop
+	if (place > 14) { place = 14; }
+	else if (place < 0) { place = 0; }
+
+	return nom[place];
+}
 void Entity::setEntName(char n[15]) { for (int a = 0; a < 16; a++) { nom[a] = n[a]; } }
 void Entity::setEntPos(int r) { room = r; }
 void Entity::setEntSprite(int s) { sprite = s; }
-void Entity::getEntName()
-{
-	for (int a = 0; a < 15; a++) { cout << nom[a]; }
-	cout << "; ";
-}
 void Entity::entMove(int dir)
 {
 	switch (dir)
@@ -82,6 +84,7 @@ void initEnts()
 
 Entity getRefEnt(int id)
 {
+
 	switch (id)
 	{
 	case 0:

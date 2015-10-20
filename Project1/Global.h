@@ -3,6 +3,8 @@
 #pragma once
 #include <iostream>
 #include <cmath>
+#include <ctime>
+#include <fstream>
 #include "sfwdraw.h"
 using namespace sfw;
 using namespace std;
